@@ -163,6 +163,7 @@
 **Output Screenshots:**
 
 1) Magic Cube
+![img1](./screenshots/p1.png)
 
 
 1) 3D Tic Tac Toe
