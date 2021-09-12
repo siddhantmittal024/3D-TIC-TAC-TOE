@@ -1,29 +1,29 @@
 ## 3D TIC TAC TOE & MAGIC CUBE
 
 
-1. **Algorithm to generate 3D Magic Cube:**
+A. **Algorithm to generate 3D Magic Cube:**
 
 1. The numbers from 1 to 27 in a magic cube are found to be following a pattern. The function *createMagicCube()* makes use of this pattern to find the next position of insertion each time and thus insert every number at the required position in the magic cube.
-1. The position of 1 is found from observation to always lie in a certain position in the cube, and the rest of the numbers follow a pattern which depends on this initial position
-1. From observation, it was found that the initial position, that is the position of 1 in the cube, is (n/2, 0, n/2), where n is the size of the cube.
+2. The position of 1 is found from observation to always lie in a certain position in the cube, and the rest of the numbers follow a pattern which depends on this initial position
+3. From observation, it was found that the initial position, that is the position of 1 in the cube, is (n/2, 0, n/2), where n is the size of the cube.
    1. *height* indicates the surface level in the cube- 0 being the highest and n-1 being the lowest.
    1. *row* indicates the row number on each surface- 0 being furthest at the back and n-1 being at the front of the cube.
    1. *col* indicates the column number on each surface- 0 being furthest at the left and n-1 being furthest at the right.
-1. The pattern is as follows-
-   1. ‘i’ is inserted at the found position in the cube and then incremented, allowing the insertion of all numbers from 1 to n\*n\*n in the cube.
-   1. If the required position in the cube is already occupied, from observation it is found that the position is instead shifted to the next surface (lower surface), and the previous row (the row at the back).
-   1. If the row, column or height is less than 0, i.e it goes out of bounds and is not valid, it is made to wrap around and come to n-1. Similarly if it becomes greater than n-1, it is made to wrap around and come to 0.
-   1. If the required position in the cube is again found to be occupied, from observation it is found that the position is instead shifted to the next column (to the right), and the previous surface (upper surface).
-   1. If the row, column or height is less than 0, i.e it goes out of bounds and is not valid, it is made to wrap around and come to n-1. Similarly if it becomes greater than n-1, it is made to wrap around and come to 0.
-   1. Once the correct position is found, the current number, which is i, is inserted at this position in the cube.
-   1. From observation it is found that the next position is found from the current position- it is shifted to the previous row (the row to the back), and the previous column (to the left).
-   1. If the row, column or height is less than 0, i.e it goes out of bounds and is not valid, it is made to wrap around and come to n-1. Similarly if it becomes greater than n-1, it is made to wrap around and come to 0.
+4. The pattern is as follows-
+   a. ‘i’ is inserted at the found position in the cube and then incremented, allowing the insertion of all numbers from 1 to n\*n\*n in the cube.
+   b. If the required position in the cube is already occupied, from observation it is found that the position is instead shifted to the next surface (lower surface), and the previous row (the row at the back).
+   c. If the row, column or height is less than 0, i.e it goes out of bounds and is not valid, it is made to wrap around and come to n-1. Similarly if it becomes greater than n-1, it is made to wrap around and come to 0.
+   d. If the required position in the cube is again found to be occupied, from observation it is found that the position is instead shifted to the next column (to the right), and the previous surface (upper surface).
+   e. If the row, column or height is less than 0, i.e it goes out of bounds and is not valid, it is made to wrap around and come to n-1. Similarly if it becomes greater than n-1, it is made to wrap around and come to 0.
+   f. Once the correct position is found, the current number, which is i, is inserted at this position in the cube.
+   g. From observation it is found that the next position is found from the current position- it is shifted to the previous row (the row to the back), and the previous column (to the left).
+   1h. If the row, column or height is less than 0, i.e it goes out of bounds and is not valid, it is made to wrap around and come to n-1. Similarly if it becomes greater than n-1, it is made to wrap around and come to 0.
 
-`      `**B.   TIC TAC TOE**
+**B. TIC TAC TOE**
 
-**           Global Variables Used :
+**Global Variables Used :
 
-- *magicCubePosition:* Map data structure used to map the number on the magicCube to                                  its coordinates
+- *magicCubePosition:* Map data structure used to map the number on the magicCube to its coordinates
 - i*nputMap:* Map data structure used to map the positions on a cube (1-27) with the number on the magicCube
 - *currBoard*: 3D vector for initializing the game board (initially blank and filled with '-')
 - humanWins  & computerWins: Variables to store the count of user and computer wins
@@ -39,14 +39,14 @@
 
 
 
-`        `**Execution-**
+**Execution-**
 
 1) *int main()*
    1) The execution of the program starts from the main function.
    1) It calls *createMagicCube()* function to generate the magic cube of order n=3.
    1) It then calls the *startGame()* function.
 
-1) *startGame()*
+2) *startGame()*
    1) This function initializes the game.
    1) It displays the rules of the game.
    1) It calls the function to *displayIntialBoard()*
@@ -56,14 +56,15 @@
    1) The game goes on until either the board is filled, or the user or the computer completes 10 wins.
    1) In the end it displays the final score, and declares a winner.
 
-1) *displayIntialBoard()*
+3) *displayIntialBoard()*
    1) *displayInitialBoard() is a 3D game board which is displayed in the game rules sections and contains the numbers(positions: 1-27).* 
    1) *It is displayed for the user to easily understand how to start the game and where and how to make the next move according to the vacant position on the board.* 
 
-1) *createGameBoard()*
+4) *createGameBoard()*
    1) Used to initialize a new *gameBoard* before the game begins.
    1) It fills the board with '-' which indicates empty places on the board.
-1) *humanTurn()*
+
+5) *humanTurn()*
    1) *humanTurn()* is used to complete the user's turn.
       1) The vector *humanCoords* is used to store the coordinates of the position entered by the user: 
       1) ` `*inputMap* gives the number from the Magic Cube which corresponds to the entered position.
@@ -74,13 +75,13 @@
    1) The current game board is displayed by calling the *displayGameBoard()* function
    1) The current number of wins and list of positions played by the user and the computer respectively is displayed.
 
-1) *winCheck()*
+6) *winCheck()*
    1) This function is used to check if there is a win using the list of moves that have been played.
    1) The *user* variable is used to determine if the player is human or computer and call the function *makeSubsequences()* which is being used to check if there is a win accordingly.
    1) Vector *subarr* is used by the makeSubsequences() function.
    1) If the number of moves played is less than order of cube then win is not possible and it exists otherwise it calls *makeSubsequences()* function.
 
-1) *makeSubsequences()*
+7) *makeSubsequences()*
    1) *makeSubsequences()* is a recursive function to generate all possible sequences of order n from the list of moves played and check if their sum is equal to the magic number and if they are collinear using the function *checkLine()* and increment the wins of the player playing. *makeSubsequences()* is called recursively to make all possible subsequences:
       1) *index* is used to recursively make subsequences of *ar*r until *index* equals *n*, indicating that all possible subsequences have been made. We recursively keep calling *checkCanWin()*, once without including element at the current *index*, and once including element at current *index* by adding it to *subarr*.
       1) vector *arr* is either *computerList* or *humanList-* which contains the numbers on the magic cube corresponding to all the positions that the player has marked.
@@ -98,7 +99,7 @@
    1) The current position is checked with the existing successful subarrays inserted in *humanLists* and *computerLists* according to the value of *player*, to ensure that it is not already inserted, hence avoiding duplicates.
    1) If it does not already exist, it is added to *humanLists* or *computerLists* according to the value of *player* (0=computer, 1-user), and humanWins or computerWins are also accordingly incremented.
 
-1) *checkLine()*
+8) *checkLine()*
    1) *checkLine()* function is basically used to check the collinearity of the three numbers on our magic cube.
    1) It takes 3 numbers in order starting from position *(i=0,j=1,k=2)* in our array where all the numbers are stored and keep on incrementing the positions*(i,j,k)* by 1 until we reach the last number in the list.
    1) 2. It then finds the coordinates of the chosen 3 numbers from the magic cube (eg. 8 has coordinates (0,0,0) in our magicCube).
@@ -108,10 +109,10 @@
 
 
 
-1) *displayGameBoard()*
+9) *displayGameBoard()*
    1) Used to the display 3D game board layer-wise according to the 3 layers of the cube.(Layer 1, Layer 2, Layer 3)
 
-1) ` `*computerTurn()*
+10) *computerTurn()*
    1) This function is used to decide the position to be played by the computer and mark it on the board using the *goMake()* function.
    1) If the number of turns checked by variable *turnsCount* is just 1 then *make\_2()* function is called.
    1) The vector *subarr* is used by the function *checkCanWin()* to determine if winning is possible.
@@ -120,18 +121,18 @@
    1) Otherwise it checks if the user can win by calling *checkCanWin* and blocks that position if true is returned.
    1) Else it calls *make\_2()* and marks the most favourable position.
 
-1) ` `*make\_2()*
+1) *make\_2()*
    1) This function checks if the position is empty or not by calling *check()* function. If true is returned i.e. it's empty, it returns that position.In case, the position is filled it checks for the next position.
    1) ` `It first checks for the center position of the cube.
    1) It then checks for the 8 extreme corner positions of the cube.
    1) It then checks for the remaining positions starting from the top surface and moving to the bottom one.
 
-1) ` `*check()*
+11) *check()*
    1) This function is used to check if the position *pos* passed as a parameter to the array is empty or not.
       1) *checkCoords* vector contains the coordinates of the number(*pos*) according to the magic cube. 
    1) If the position on board is marked '-' i.e. its empty the function returns true.Else, it returns false
 
-1) ` `*goMake()*
+12) *goMake()*
    1) *goMake()* is used to fill the position required by the computer.The position passed to the function is added to the list of positions played by the computer, and the position is filled on the *gameboard*.
       1) The vector *compCoords* is used to store the coordinates of the position passed by the computer.
       1) *inputMap* gives the number from the Magic Cube which corresponds to the position.
@@ -141,7 +142,7 @@
    1) The current gameboard is displayed, and the current number of wins and list of positions played by the user and the computer respectively is displayed.
 
 
-1) ` `*checkCanWIn()*
+13) *checkCanWIn()*
    1) *checkCanWin()* is used to check whether there is any position which would allow the player to win.It is called recursively to make all possible subsequences
       1) *magicNumber* stores the required sum for each line of the magic cube.
       1) *arr* is the passed vector- either *computerList* or *humanList*- which contains the numbers on the magic cube corresponding to all the positions that the player has marked.
@@ -156,11 +157,6 @@
    1) *checkLine()* is called to check whether the subarr along with diff together form a line.
    1) If so, it means that the player can make a move on this position to win a point. Accordingly, the variable *computerCanWin* or *humanCanWin* is made to be true, depending on the value of the player.
    1) *inputMap* is used to check the corresponding position from the number on the magic cube. This position is the next winning position for the player on the gameboard, and is hence stored in the variable *winningPosition*.
-
-
-
-
-
 
 
 
