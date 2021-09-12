@@ -19,7 +19,7 @@
    g. From observation it is found that the next position is found from the current position- it is shifted to the previous row (the row to the back), and the previous column (to the left).
    1h. If the row, column or height is less than 0, i.e it goes out of bounds and is not valid, it is made to wrap around and come to n-1. Similarly if it becomes greater than n-1, it is made to wrap around and come to 0.
 
-### B. TIC TAC TOE**
+### B. TIC TAC TOE
 
 #### Global Variables Used :
 
@@ -160,31 +160,31 @@
 
 
 
-**Output Screenshots:**
+### Output Screenshots:
 
-1) Magic Cube
+#### 1) Magic Cube
 
 
 ![img1](./screenshots/p1.png)
 
 
-1) 3D Tic Tac Toe
+#### 2) 3D Tic Tac Toe
 
-- Rules
+##### - Rules
 
-![img1](./screenshots/p2.png)
-
-
-- Game in Progress
+![img2](./screenshots/p2.png)
 
 
-![img1](./screenshots/p3.png)
+##### - Game in Progress
 
 
-- Result on Game Completion
+![img3](./screenshots/p3.png)
 
 
-![img1](./screenshots/p4.png)
+##### - Result on Game Completion
+
+
+![img4](./screenshots/p4.png)
 
 
 
