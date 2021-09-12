@@ -185,15 +185,6 @@
 
 
 
-**Contribution:**
-
-Muskan Mehta - 33.33%
-
-Prarthna Pahuja - 33.33%
-
-Siddhant Mittal - 33.33%
-
-(Everyone contributed equally.)
 
 
 
