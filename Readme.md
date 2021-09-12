@@ -1,4 +1,4 @@
-#*3D TIC TAC TOE & MAGIC CUBE* 
+##3D TIC TAC TOE & MAGIC CUBE
 
 
 1. **Algorithm to generate 3D Magic Cube:**
