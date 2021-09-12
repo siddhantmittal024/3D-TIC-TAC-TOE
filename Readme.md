@@ -163,6 +163,8 @@
 **Output Screenshots:**
 
 1) Magic Cube
+
+
 ![img1](./screenshots/p1.png)
 
 
@@ -170,15 +172,19 @@
 
 - Rules
 
-
+![img1](./screenshots/p2.png)
 
 
 - Game in Progress
 
 
+![img1](./screenshots/p3.png)
 
 
 - Result on Game Completion
+
+
+![img1](./screenshots/p4.png)
 
 
 
